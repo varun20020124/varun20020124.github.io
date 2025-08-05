@@ -3,66 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
-  <!-- Tailwind via CDN for quick setup -->
+  <title>Your Name | About</title>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p3U4V6mN1M4w8D0xZg6FlI0gOeVqz2zG5i6OvJu+vfuZnrQzVr+ASZ4Z1yTdwFhYl0ZQ2z0drTIG2XIx7fXdKg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-800 antialiased">
 
-  <!-- Header / Nav -->
-  <header class="sticky top-0 bg-white shadow-md z-10">
-    <nav class="max-w-4xl mx-auto px-4 py-3 flex justify-between">
-      <a href="#about" class="hover:text-blue-600">About</a>
-      <a href="#experience" class="hover:text-blue-600">Experience</a>
-      <a href="#upto" class="hover:text-blue-600">What I’m Up To</a>
-      <a href="#projects" class="hover:text-blue-600">Projects</a>
+  <!-- Navigation -->
+  <header class="sticky top-0 bg-white shadow z-10">
+    <nav class="max-w-4xl mx-auto px-4 py-3 flex space-x-6">
+      <a href="index.html"   class="text-lg font-medium hover:text-blue-600">About</a>
+      <a href="projects.html"class="text-lg font-medium hover:text-blue-600">Projects</a>
+      <a href="cv.html"      class="text-lg font-medium hover:text-blue-600">CV</a>
     </nav>
   </header>
 
-  <!-- Main content -->
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-20">
+  <!-- Main: About + Contact + Experience + Skills -->
+  <main class="max-w-4xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
 
-    <!-- About Section -->
-    <section id="about" class="text-center">
+    <!-- Left: Photo & Socials -->
+    <aside class="col-span-1 text-center">
       <img 
         src="assets/img/profile.jpg" 
         alt="Your Name" 
-        class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+        class="w-full h-auto object-cover rounded-lg mb-4"
       />
-      <h1 class="text-4xl font-bold mb-2">About Me</h1>
-      <p><!-- Your bio goes here --></p>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-      <h2 class="text-3xl font-semibold mb-4">Experience</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <!-- Your experience bullets -->
-      </ul>
-    </section>
-
-    <!-- What I’m Up To Section -->
-    <section id="upto">
-      <h2 class="text-3xl font-semibold mb-4">What I’m Up To</h2>
-      <p><!-- What you’re currently working on or learning --></p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2 class="text-3xl font-semibold mb-4">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Project cards or links -->
+      <div class="flex justify-center space-x-4">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener"
+           class="text-2xl hover:text-blue-700">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:youremail@example.com" class="text-2xl hover:text-red-500">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="cv.html" class="text-2xl hover:text-gray-700">
+          <i class="fas fa-file-alt"></i>
+        </a>
       </div>
+    </aside>
+
+    <!-- Right: Bio, Experience, Skills -->
+    <section class="col-span-2 space-y-6">
+      <h1 class="text-3xl font-bold">About Me</h1>
+      <p>
+        <!-- Your short bio/introduction here -->
+      </p>
+
+      <h2 class="text-2xl font-semibold">Experience</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>
+          <span class="font-medium">Design Director, Cause Lab</span> 
+          <span class="text-sm text-gray-600">Sep 2024 – Present</span>
+          <p>Art-directed and designed marketing collateral for non-profits, managed a team of five designers, and oversaw client relations and project strategy.</p>
+        </li>
+        <!-- add more <li> roles here -->
+      </ul>
+
+      <h2 class="text-2xl font-semibold">Technical Skills</h2>
+      <p>
+        <!-- e.g. HTML · CSS · JavaScript · React · Tailwind · Next.js · Python · Git · Docker -->
+      </p>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="text-center py-6 border-t">
     © 2025 Your Name
   </footer>
 
-  <!-- Your custom JS -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
