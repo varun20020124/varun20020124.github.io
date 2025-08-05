@@ -6,7 +6,7 @@
   <title>Varun Jhaveri | About</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -58,10 +58,51 @@
     </aside>
 
     <!-- Right column: About content -->
-    <section>
-      <h1 class="text-3xl font-bold mb-4">About Me</h1>
-      <p><!-- Your bio/introduction goes here --></p>
-      <!-- Add Experience / Skills below as needed -->
+    <section class="space-y-6">
+
+      <!-- Introduction -->
+      <p class="text-lg">
+        I am a recent Computer Engineering & Applied Mathematics graduate from UMass seeking full-time SWE opportunities.
+      </p>
+
+      <!-- Experiences -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Experiences:</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            <strong>NASA SWE Intern & IPAM Fellow:</strong>
+            Modernized a legacy satellite analysis pipeline into containerized microservices with CI/CD, shrinking deployment time from hours to minutes for a four-scientist research team.
+          </li>
+          <li>
+            <strong>Dream11 SWE Intern:</strong>
+            Built a real-time scoring service, optimized hyperparameter-tuning workflows, and automated CI/CD pipelines for the ML Platform Team.
+          </li>
+          <li>
+            <strong>Research Assistant, UMass Amherst:</strong>
+            Developed computational models in the Buttenschoen Lab to study cell-cell communication and long-range migration using mathematical and simulation tools.
+          </li>
+        </ul>
+      </div>
+
+      <!-- What I'm Up To -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">What I’m Up To</h2>
+        <p>
+          I’m solving LeetCode problems daily, learning system design and distributed systems, and exploring agentic AI workflows and LLMs with LangChain, LlamaIndex, and the OpenAI API.
+        </p>
+      </div>
+
+      <!-- Toolkit -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Toolkit:</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Languages:</strong> Python, Java, JavaScript, C++</li>
+          <li><strong>Frameworks:</strong> FastAPI, Spring Boot, Next.js, React</li>
+          <li><strong>LLM Toolkit:</strong> LangChain, LlamaIndex, OpenAI API, FAISS</li>
+          <li><strong>Infra:</strong> Docker, Git, AWS (S3, EC2, RDS), GitHub Actions</li>
+        </ul>
+      </div>
+
     </section>
 
   </main>
