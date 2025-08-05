@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | About</title>
+  <title>Varun Jhaveri | About</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome for icons -->
@@ -17,66 +17,61 @@
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
-  <!-- Navigation -->
-  <header class="sticky top-0 bg-white shadow z-10">
-    <nav class="max-w-4xl mx-auto px-4 py-3 flex space-x-6">
-      <a href="index.html"   class="text-lg font-medium hover:text-blue-600">About</a>
-      <a href="projects.html"class="text-lg font-medium hover:text-blue-600">Projects</a>
-      <a href="cv.html"      class="text-lg font-medium hover:text-blue-600">CV</a>
+  <!-- Top Navigation -->
+  <header class="bg-gray-800 text-white">
+    <nav class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Name -->
+      <a href="index.html" class="text-xl font-semibold hover:text-gray-300">
+        Varun Jhaveri
+      </a>
+      <!-- Tabs -->
+      <div class="space-x-6">
+        <a href="projects.html" class="hover:text-gray-300">Projects</a>
+        <a href="cv.html" class="hover:text-gray-300">CV</a>
+      </div>
     </nav>
   </header>
 
-  <!-- Main: About + Contact + Experience + Skills -->
-  <main class="max-w-4xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+  <!-- Main Content: two-column split -->
+  <main class="max-w-4xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-8">
 
-    <!-- Left: Photo & Socials -->
-    <aside class="col-span-1 text-center">
-      <img 
-        src="assets/img/profile.jpg" 
-        alt="Your Name" 
-        class="w-full h-auto object-cover rounded-lg mb-4"
+    <!-- Left column: Photo + Socials -->
+    <aside class="flex flex-col items-center">
+      <!-- Increase width to w-64 -->
+      <img
+        src="assets/img/profile.jpg"
+        alt="Varun Jhaveri"
+        class="w-64 h-auto object-cover rounded-lg"
       />
-      <div class="flex justify-center space-x-4">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener"
-           class="text-2xl hover:text-blue-700">
+      <div class="flex space-x-4 mt-4">
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener"
+          class="text-2xl text-blue-700 hover:text-blue-500"
+        >
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="mailto:youremail@example.com" class="text-2xl hover:text-red-500">
+        <a
+          href="mailto:youremail@example.com"
+          class="text-2xl text-red-600 hover:text-red-400"
+        >
           <i class="fas fa-envelope"></i>
-        </a>
-        <a href="cv.html" class="text-2xl hover:text-gray-700">
-          <i class="fas fa-file-alt"></i>
         </a>
       </div>
     </aside>
 
-    <!-- Right: Bio, Experience, Skills -->
-    <section class="col-span-2 space-y-6">
-      <h1 class="text-3xl font-bold">About Me</h1>
-      <p>
-        <!-- Your short bio/introduction here -->
-      </p>
-
-      <h2 class="text-2xl font-semibold">Experience</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>
-          <span class="font-medium">Design Director, Cause Lab</span> 
-          <span class="text-sm text-gray-600">Sep 2024 – Present</span>
-          <p>Art-directed and designed marketing collateral for non-profits, managed a team of five designers, and oversaw client relations and project strategy.</p>
-        </li>
-        <!-- add more <li> roles here -->
-      </ul>
-
-      <h2 class="text-2xl font-semibold">Technical Skills</h2>
-      <p>
-        <!-- e.g. HTML · CSS · JavaScript · React · Tailwind · Next.js · Python · Git · Docker -->
-      </p>
+    <!-- Right column: placeholder for your About content -->
+    <section>
+      <!-- We’ll fill this in next -->
+      <h1 class="text-3xl font-bold mb-4">About Me</h1>
+      <p><!-- Your bio/introduction goes here --></p>
     </section>
 
   </main>
 
   <footer class="text-center py-6 border-t">
-    © 2025 Your Name
+    © 2025 Varun Jhaveri
   </footer>
 
   <script src="assets/js/main.js"></script>
