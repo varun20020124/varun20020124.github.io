@@ -8,7 +8,6 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p3U4V6mN1M4w8D0xZg6FlI0gOeVqz2zG5i6OvJu+vfuZnrQzVr+ASZ4Z1yTdwFhYl0ZQ2z0drTIG2XIx7fXdKg=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
@@ -18,25 +17,52 @@
   <!-- Top Navigation -->
   <header class="bg-gray-800 text-white">
     <nav class="max-w-4xl mx-auto px-4 py-3 flex items-center space-x-6">
-      <a href="index.html"       class="font-semibold hover:text-gray-300">Varun Jhaveri</a>
-      <a href="index.html"       class="hover:text-gray-300">About</a>
-      <a href="projects.html"    class="hover:text-gray-300">Projects</a>
-      <a href="cv.html"          class="hover:text-gray-300">CV</a>
+      <a href="index.html"    class="font-semibold hover:text-gray-300">Varun Jhaveri</a>
+      <a href="index.html"    class="hover:text-gray-300">About</a>
+      <a href="projects.html" class="hover:text-gray-300">Projects</a>
+      <a href="cv.html"       class="hover:text-gray-300">CV</a>
     </nav>
   </header>
 
-  <!-- Main: Projects Grid -->
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-6">
-    <h1 class="text-3xl font-bold">Projects</h1>
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Example project card -->
-      <a href="https://github.com/varun20020124/CollabCursor"
-         class="block p-6 border rounded-lg hover:shadow-lg transition">
-        <h2 class="text-xl font-semibold mb-2">NoteShare</h2>
-        <p>A one-way collaborative notepad with real-time streaming and GPT-4 code explanations via LangChain agents.</p>
-      </a>
-      <!-- Repeat for CollabQuest, etc. -->
-    </div>
+  <!-- Main: Projects Sections -->
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- Software Engineering Projects -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Software Engineering Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="#" class="block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">NoteShare</h3>
+          <p>A one-way collaborative notepad with real-time streaming and GPT-4 code explanations.</p>
+        </a>
+        <a href="#" class="block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">CollabQuest</h3>
+          <p>An LLM-augmented document editor with sidebar Q&A powered by FAISS and RAG.</p>
+        </a>
+        <a href="#" class="block p-6 border rounded-lg hover:shadow-lg transition md:col-span-2">
+          <h3 class="text-xl font-semibold mb-2">SpecLens</h3>
+          <p>An OpenAPI/Swagger “lens” that lets you query and summarize any spec in natural language.</p>
+        </a>
+      </div>
+    </section>
+
+    <hr class="border-gray-300" />
+
+    <!-- Research Projects -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Research Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="#" class="block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">MiniDiff C10</h3>
+          <p>A minimal differentiable C<sub>10</sub> implementation for studying topological flows.</p>
+        </a>
+        <a href="#" class="block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Study of ReLu Loss Landscape</h3>
+          <p>An analysis of ReLU activation loss surfaces in deep nets, exploring critical points and curvature.</p>
+        </a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="text-center py-6 border-t">
