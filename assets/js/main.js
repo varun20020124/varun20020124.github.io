@@ -1,72 +1,56 @@
-// Smooth-scroll for nav (optional)
-document.querySelectorAll('nav a').forEach(link =>
-  link.addEventListener('click', e => {
-    if (link.getAttribute('href').startsWith('#')) {
-      e.preventDefault();
-      document.querySelector(link.getAttribute('href'))
-              .scrollIntoView({ behavior: 'smooth' });
-    }
-  })
-);
+// assets/js/main.js
 
-// Project search filter + sort
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('project-search');
+  const divider = document.getElementById('section-divider');
 
-  // Cache containers & initial cards/order
+  // Grab sections and their containers
   const sections = [
-    { sect: document.getElementById('sw-section'), cont: document.getElementById('sw-projects') },
-    { sect: document.getElementById('rw-section'), cont: document.getElementById('rw-projects') }
+    { wrapper: document.getElementById('sw-section'), container: document.getElementById('sw-projects') },
+    { wrapper: document.getElementById('rw-section'), container: document.getElementById('rw-projects') }
   ];
 
-  sections.forEach(({ cont }) => {
-    Array.from(cont.children).forEach((card, idx) => {
-      card.dataset.initIndex = idx;
-    });
+  // Store original cards for each section
+  sections.forEach(sec => {
+    sec.original = Array.from(sec.container.children);
   });
-
-  const divider = document.getElementById('section-divider');
 
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
+    let anyVisible = false;
+    let allVisible = true;
 
-    let anySectionVisible = false;
-
-    sections.forEach(({ sect, cont }) => {
-      const cards = Array.from(cont.children);
+    sections.forEach(sec => {
+      // Filter & sort
       let results;
-
-      if (q === '') {
-        // restore original order
-        results = cards.sort((a, b) => a.dataset.initIndex - b.dataset.initIndex);
+      if (!q) {
+        results = sec.original.slice();
       } else {
-        // filter & sort by index of match
-        results = cards
-          .map(card => {
-            const text = card.textContent.toLowerCase();
-            const idx = text.indexOf(q);
-            return { card, idx };
-          })
-          .filter(x => x.idx !== -1)
-          .sort((a, b) => a.idx - b.idx)
-          .map(x => x.card);
+        results = sec.original
+          .filter(card => card.textContent.toLowerCase().includes(q))
+          .sort((a, b) => {
+            const ai = a.textContent.toLowerCase().indexOf(q);
+            const bi = b.textContent.toLowerCase().indexOf(q);
+            return ai - bi;
+          });
       }
 
-      // apply results
-      cont.innerHTML = '';
-      results.forEach(card => cont.appendChild(card));
+      // Re-render section
+      sec.container.innerHTML = '';
+      results.forEach(card => sec.container.appendChild(card));
 
-      // show/hide section
+      // Show/hide wrapper
       const visible = results.length > 0;
-      sect.style.display = visible ? '' : 'none';
-      if (visible) anySectionVisible = true;
+      sec.wrapper.style.display = visible ? '' : 'none';
+      anyVisible = anyVisible || visible;
+      allVisible = allVisible && visible;
     });
 
-    // hide divider if either section is hidden
-    if (input.value.trim() === '') {
+    // Divider is only shown when both sections are visible (or both empty on empty query)
+    if (!q) {
       divider.style.display = '';
     } else {
-      divider.style.display = anySectionVisible && sections.every(({ sect }) => sect.style.display === '') ? '' : 'none';
+      divider.style.display = allVisible && anyVisible ? '' : 'none';
     }
   });
 });
