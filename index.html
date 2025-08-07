@@ -28,7 +28,7 @@
     </nav>
   </header>
 
-  <!-- Main Content: two‐column with custom widths -->
+  <!-- Main Content -->
   <main class="max-w-4xl mx-auto px-4 py-8 grid md:[grid-template-columns:450px_minmax(0,1fr)] gap-8">
     
     <!-- Left column: Photo + Socials -->
@@ -55,37 +55,82 @@
     <!-- Right column: About & Experiences -->
     <section class="space-y-8">
 
-      <!-- Introduction (unchanged) -->
+      <!-- Introduction -->
       <p class="text-lg">
         I am a recent Computer Engineering & Applied Mathematics graduate from UMass seeking full-time SWE opportunities.
       </p>
 
-      <!-- Experiences (NEW) -->
+      <!-- Experiences -->
       <div>
         <h2 class="text-2xl font-semibold mb-2">Experiences</h2>
         <p class="mb-4">
-          A brief summary of my work history is below, and my <a href="cv.html" class="underline hover:text-blue-600">resume</a> is available. To see what I have worked on in greater detail, check out my <a href="projects.html" class="underline hover:text-blue-600">projects</a>.
+          A brief summary of my work history is below, and my
+          <a href="cv.html" class="underline hover:text-blue-600">resume</a>
+          is available. To see what I’ve worked on in greater detail, check out my
+          <a href="projects.html" class="underline hover:text-blue-600">projects</a>.
         </p>
-        <ul class="list-disc list-inside space-y-4">
+        <ul class="list-disc list-inside space-y-6">
+
+          <!-- NASA -->
           <li>
-            <strong>NASA (Goddard Space Flight Center) SWE Intern & IPAM Fellow</strong> (Jun 2024 – Aug 2024):
-            Developed a Python framework processing 90 M+ forecast points, built an interactive Plotly Dash dashboard, and optimized ingestion with Dask, alongside PyTorch ensemble modeling.
-            <em>(Python · PyTorch · Dask)</em>
+            <h3 class="font-medium">
+              <a
+                href="https://science.gsfc.nasa.gov/"
+                class="underline hover:text-blue-600"
+                target="_blank" rel="noopener"
+              >Goddard Space Flight Center</a>
+            </h3>
+            <p class="text-sm italic mb-2">Software Engineer Intern (Jun 2024 – Aug 2024)</p>
+            <p>
+              Developed a Python framework ingesting 90 M+ forecast points to compute four statistical error tests, replaced days-long notebooks, built an interactive Plotly Dash dashboard, and optimized the pipeline with Dask, cutting runtime from 4 h to 30 min.
+            </p>
+            <p><em>Python · PyTorch · Dask</em></p>
           </li>
+
+          <!-- IPAM -->
           <li>
-            <strong>Dream11 SWE Intern</strong> (Jun 2023 – Aug 2023):
-            Created a full-stack Spring Boot & React web tool for live fantasy scoring, added role-based access and audit logs, and accelerated data feeds with a Python batch consumer.
-            <em>(Spring Boot · React · PostgreSQL)</em>
+            <h3 class="font-medium">
+              <a
+                href="https://www.ipam.ucla.edu/programs/rips/"
+                class="underline hover:text-blue-600"
+                target="_blank" rel="noopener"
+              >Institute for Pure and Applied Mathematics, UCLA</a>
+            </h3>
+            <p class="text-sm italic mb-2">Research Fellow (Jun 2024 – Aug 2024)</p>
+            <p>
+              Was one of 36 undergraduate students out of 4000+ applicants selected for the <a href="https://www.ipam.ucla.edu/programs/rips/" class="underline hover:text-blue-600" target="_blank" rel="noopener">RIPS 2024</a> program.
+            </p>
           </li>
+
+          <!-- Dream11 -->
           <li>
-            <strong>Research Assistant, UMass Amherst</strong> under Prof. Matthew Dobson:
-            Developed deep-learning PDE solvers for pricing exotic multi-asset barrier options in financial engineering applications.
-            <em>(Python · TensorFlow · SciPy)</em>
+            <h3 class="font-medium">
+              <a
+                href="https://www.dream11.com"
+                class="underline hover:text-blue-600"
+                target="_blank" rel="noopener"
+              >Dream11</a>
+            </h3>
+            <p class="text-sm italic mb-2">SWE Intern (Jun 2023 – Aug 2023)</p>
+            <p>
+              Created a Spring Boot & React internal tool to stream live fantasy scoring, added role-based access and audit logs, and optimized data feeds with a Python batch consumer, reducing latency by 80 %.
+            </p>
+            <p><em>Spring Boot · React · PostgreSQL</em></p>
           </li>
+
+          <!-- Research Assistant -->
+          <li>
+            <h3 class="font-medium">Research Assistant, UMass Amherst</h3>
+            <p class="text-sm italic mb-2">Under Prof. Matthew Dobson</p>
+            <p>
+              Developed deep-learning PDE solvers for pricing exotic multi-asset barrier options in niche financial engineering applications.
+            </p>
+          </li>
+
         </ul>
       </div>
 
-      <!-- What I'm Up To (unchanged) -->
+      <!-- What I'm Up To -->
       <div>
         <h2 class="text-2xl font-semibold mb-2">What I’m Up To</h2>
         <p>
@@ -93,7 +138,7 @@
         </p>
       </div>
 
-      <!-- Toolkit (unchanged) -->
+      <!-- Toolkit -->
       <div>
         <h2 class="text-2xl font-semibold mb-2">Toolkit</h2>
         <ul class="list-disc list-inside space-y-2">
