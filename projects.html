@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Varun Jhaveri | Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="bg-white text-gray-800 antialiased">
-    
 
   <!-- Top Navigation -->
   <header class="bg-gray-800 text-white">
@@ -26,27 +25,60 @@
     </nav>
   </header>
 
-  <!-- Main: Projects Sections -->
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+    <h1 class="text-3xl font-bold">Projects</h1>
+
+    <!-- Search bar -->
+    <div class="mb-6">
+      <input
+        id="project-search"
+        type="text"
+        placeholder="Search projects..."
+        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring"
+      />
+    </div>
 
     <!-- Software Engineering Projects -->
     <section>
       <h2 class="text-2xl font-semibold mb-4">Software Engineering Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="https://github.com/varun20020124"
-           class="block p-6 border rounded-lg hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">NoteShare</h3>
-          <p>A one-way collaborative notepad with real-time streaming and GPT-4 code explanations.</p>
-        </a>
-        <a href="https://github.com/varun20020124"
-           class="block p-6 border rounded-lg hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">CollabQuest</h3>
-          <p>An LLM-augmented document editor with sidebar Q&A powered by FAISS and RAG.</p>
-        </a>
-        <a href="https://github.com/varun20020124"
-           class="block p-6 border rounded-lg hover:shadow-lg transition">
+      <div id="sw-projects" class="grid md:grid-cols-2 gap-6">
+        <!-- SpecLens -->
+        <a href="https://github.com/SumairSoomro/SpecLens"
+           class="project-card block p-6 border rounded-lg hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">SpecLens</h3>
-          <p>An OpenAPI/Swagger “lens” that lets you query and summarize any spec in natural language.</p>
+          <p>Built a strict RAG tool that ingests OpenAPI specs, embeds vectors in Pinecone, and delivers hallucination-free keyword searches through a FastAPI backend and React UI for API developers.</p>
+          <!-- tool badges -->
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <a href="https://fastapi.tiangolo.com" target="_blank" class="px-2 py-1 border rounded text-blue-600 hover:bg-blue-50">FastAPI</a>
+            <a href="https://react.dev" target="_blank" class="px-2 py-1 border rounded text-blue-500 hover:bg-blue-50">React</a>
+            <a href="https://www.pinecone.io" target="_blank" class="px-2 py-1 border rounded text-green-600 hover:bg-green-50">Pinecone</a>
+            <a href="https://langchain.com" target="_blank" class="px-2 py-1 border rounded text-purple-600 hover:bg-purple-50">LangChain</a>
+            <a href="https://supabase.com" target="_blank" class="px-2 py-1 border rounded text-indigo-600 hover:bg-indigo-50">Supabase</a>
+          </div>
+        </a>
+
+        <!-- CollabCursor -->
+        <a href="https://github.com/varun20020124/CollabCursor"
+           class="project-card block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">CollabCursor</h3>
+          <p>Implemented a Spring Boot WebSocket backend with a Next.js front end that lets multiple users annotate PDFs in real time, stores stroke data in PostgreSQL, and provides one-click GPT meeting summaries.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <a href="https://spring.io/projects/spring-boot" target="_blank" class="px-2 py-1 border rounded text-green-700 hover:bg-green-50">Spring Boot</a>
+            <a href="https://nextjs.org" target="_blank" class="px-2 py-1 border rounded text-black hover:bg-gray-100">Next.js</a>
+            <a href="https://www.postgresql.org" target="_blank" class="px-2 py-1 border rounded text-blue-700 hover:bg-blue-50">PostgreSQL</a>
+          </div>
+        </a>
+
+        <!-- MaxFlow -->
+        <a href="https://github.com/varun20020124/MaxFlow"
+           class="project-card block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">MaxFlow</h3>
+          <p>Engineered a Spring Boot service running Edmonds–Karp max flow algorithm on uploaded JSON graphs with a Next.js UI visualizing saturated links in real time, storing graphs and run metrics in PostgreSQL.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <a href="https://spring.io/projects/spring-boot" target="_blank" class="px-2 py-1 border rounded text-green-700 hover:bg-green-50">Spring Boot</a>
+            <a href="https://nextjs.org" target="_blank" class="px-2 py-1 border rounded text-black hover:bg-gray-100">Next.js</a>
+            <a href="https://www.postgresql.org" target="_blank" class="px-2 py-1 border rounded text-blue-700 hover:bg-blue-50">PostgreSQL</a>
+          </div>
         </a>
       </div>
     </section>
@@ -56,16 +88,26 @@
     <!-- Research Projects -->
     <section>
       <h2 class="text-2xl font-semibold mb-4">Research Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="https://github.com/varun20020124"
-           class="block p-6 border rounded-lg hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">MiniDiff C10</h3>
-          <p>A minimal differentiable C<sub>10</sub> implementation for studying topological flows.</p>
+      <div id="rw-projects" class="grid md:grid-cols-2 gap-6">
+        <!-- MiniDiffC10 -->
+        <a href="https://github.com/MananAbbott/MiniDiff-C10"
+           class="project-card block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">MiniDiffC10</h3>
+          <p>Compressed a Diffusion Model (DDPM32) using a knowledge distillation pipeline along with structured pruning, achieving significant reduction in inference time.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <a href="https://pytorch.org" target="_blank" class="px-2 py-1 border rounded text-red-600 hover:bg-red-50">PyTorch</a>
+          </div>
         </a>
-        <a href="https://github.com/varun20020124"
-           class="block p-6 border rounded-lg hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">Study of ReLu Loss Landscape</h3>
-          <p>An analysis of ReLU activation loss surfaces in deep nets, exploring critical points and curvature.</p>
+
+        <!-- Understanding the ReLU Loss Landscape -->
+        <a href="https://github.com/varun20020124/relu-loss-landscape"
+           class="project-card block p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Understanding the ReLU Loss Landscape</h3>
+          <p>This project explores the mathematical structure of the loss surface in shallow (1-hidden-layer) ReLU neural networks. We analyze minima, maxima, and saddle points via gradients and Hessians, visualize partitioning of input space, and track gradient norms during training under different optimizers.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <a href="https://pytorch.org" target="_blank" class="px-2 py-1 border rounded text-red-600 hover:bg-red-50">PyTorch</a>
+            <a href="https://scipy.org" target="_blank" class="px-2 py-1 border rounded text-blue-800 hover:bg-blue-50">SciPy</a>
+          </div>
         </a>
       </div>
     </section>
@@ -75,5 +117,7 @@
   <footer class="text-center py-6 border-t">
     © 2025 Varun Jhaveri
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
