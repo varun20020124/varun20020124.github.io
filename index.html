@@ -4,112 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Varun Jhaveri | About</title>
-
-  <!-- Font Awesome CSS (must load before Tailwind) -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p3U4V6mN1M4w8D0xZg6FlI0gOeVqz2zG5i6OvJu+vfuZnrQzVr+ASZ4Z1yTdwFhYl0ZQ2z0drTIG2XIx7fXdKg=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-
-  <!-- Tailwind CSS via CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body class="bg-white text-gray-800 antialiased">
-    
 
   <!-- Top Navigation -->
   <header class="bg-gray-800 text-white">
     <nav class="max-w-4xl mx-auto px-4 py-3 flex items-center space-x-6">
-      <a href="index.html"       class="font-semibold hover:text-gray-300">Varun Jhaveri</a>
       <a href="index.html"       class="hover:text-gray-300">About</a>
       <a href="projects.html"    class="hover:text-gray-300">Projects</a>
       <a href="cv.html"          class="hover:text-gray-300">CV</a>
+      <a href="contact.html"     class="hover:text-gray-300">Contact</a>
     </nav>
   </header>
 
-  <!-- Main Content: two‐column split -->
-  <main class="max-w-4xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-8">
+  <!-- Main Content: two‐column with custom widths -->
+  <main class="max-w-4xl mx-auto px-4 py-8 grid md:[grid-template-columns:450px_minmax(0,1fr)] gap-8">
+    
+    <!-- Left column: Photo + Socials -->
+    <aside class="flex flex-col items-center -ml-12">
+      <img
+        src="assets/img/profile.jpg"
+        alt="Varun Jhaveri"
+        class="w-[450px] h-auto object-cover rounded-lg"
+      />
+      <h1 class="mt-4 text-3xl font-bold">Hi, I’m Varun Jhaveri</h1>
+      <div class="flex space-x-4 mt-3 text-2xl">
+        <a href="https://www.linkedin.com/in/varunjhaveri/" target="_blank" rel="noopener" class="hover:text-blue-700">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/varun20020124" target="_blank" rel="noopener" class="hover:text-gray-600">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:varun.jhaveri.02@gmail.com" class="hover:text-red-600">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </aside>
 
-<aside class="flex flex-col items-center -ml-8">
-  <!-- Profile image -->
-  <img
-    src="assets/img/profile.jpg"
-    alt="Varun Jhaveri"
-    class="w-[400px] h-auto object-cover rounded-lg"
-  />
+    <!-- Right column: About & Experiences -->
+    <section class="space-y-8">
 
-  <!-- Centered greeting under image -->
-  <h1 class="mt-4 text-3xl font-bold">Hi, I’m Varun Jhaveri</h1>
-
-  <!-- Centered icons -->
-  <div class="flex space-x-4 mt-3 text-2xl">
-    <a
-      href="https://www.linkedin.com/in/varunjhaveri/"
-      target="_blank" rel="noopener"
-      class="hover:text-blue-700"
-    >
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a
-      href="https://github.com/varun20020124"
-      target="_blank" rel="noopener"
-      class="hover:text-gray-600"
-    >
-      <i class="fab fa-github"></i>
-    </a>
-    <a
-      href="mailto:varun.jhaveri.02@gmail.com"
-      class="hover:text-red-600"
-    >
-      <i class="fas fa-envelope"></i>
-    </a>
-  </div>
-</aside>
-
-
-    <!-- Right column: About content -->
-    <section class="space-y-6">
-
-      <!-- Introduction -->
+      <!-- Introduction (unchanged) -->
       <p class="text-lg">
         I am a recent Computer Engineering & Applied Mathematics graduate from UMass seeking full-time SWE opportunities.
       </p>
 
-      <!-- Experiences -->
+      <!-- Experiences (NEW) -->
       <div>
-        <h2 class="text-2xl font-semibold mb-2">Experiences:</h2>
-        <ul class="list-disc list-inside space-y-2">
+        <h2 class="text-2xl font-semibold mb-2">Experiences</h2>
+        <p class="mb-4">
+          A brief summary of my work history is below, and my <a href="cv.html" class="underline hover:text-blue-600">resume</a> is available. To see what I have worked on in greater detail, check out my <a href="projects.html" class="underline hover:text-blue-600">projects</a>.
+        </p>
+        <ul class="list-disc list-inside space-y-4">
           <li>
-            <strong>NASA SWE Intern & IPAM Fellow:</strong>
-            Modernized a legacy satellite analysis pipeline into containerized microservices with CI/CD, shrinking deployment time from hours to minutes for a four-scientist research team.
+            <strong>NASA (Goddard Space Flight Center) SWE Intern & IPAM Fellow</strong> (Jun 2024 – Aug 2024):
+            Developed a Python framework processing 90 M+ forecast points, built an interactive Plotly Dash dashboard, and optimized ingestion with Dask, alongside PyTorch ensemble modeling.
+            <em>(Python · PyTorch · Dask)</em>
           </li>
           <li>
-            <strong>Dream11 SWE Intern:</strong>
-            Built a real-time scoring service, optimized hyperparameter-tuning workflows, and automated CI/CD pipelines for the ML Platform Team.
+            <strong>Dream11 SWE Intern</strong> (Jun 2023 – Aug 2023):
+            Created a full-stack Spring Boot & React web tool for live fantasy scoring, added role-based access and audit logs, and accelerated data feeds with a Python batch consumer.
+            <em>(Spring Boot · React · PostgreSQL)</em>
           </li>
           <li>
-            <strong>Research Assistant, UMass Amherst:</strong>
-            Deep Learning for pdes
+            <strong>Research Assistant, UMass Amherst</strong> under Prof. Matthew Dobson:
+            Developed deep-learning PDE solvers for pricing exotic multi-asset barrier options in financial engineering applications.
+            <em>(Python · TensorFlow · SciPy)</em>
           </li>
         </ul>
       </div>
 
-      <!-- What I'm Up To -->
+      <!-- What I'm Up To (unchanged) -->
       <div>
         <h2 class="text-2xl font-semibold mb-2">What I’m Up To</h2>
         <p>
-          I'm solving LeetCode problems daily, learning system design and distributed systems, and exploring agentic AI workflows and LLMs with LangChain, LlamaIndex, and the OpenAI API.
+          I’m solving LeetCode problems daily, learning system design and distributed systems, and exploring agentic AI workflows and LLMs with LangChain, LlamaIndex, and the OpenAI API.
         </p>
       </div>
 
-      <!-- Toolkit -->
+      <!-- Toolkit (unchanged) -->
       <div>
-        <h2 class="text-2xl font-semibold mb-2">Toolkit:</h2>
+        <h2 class="text-2xl font-semibold mb-2">Toolkit</h2>
         <ul class="list-disc list-inside space-y-2">
           <li><strong>Languages:</strong> Python, Java, JavaScript, C++</li>
           <li><strong>Frameworks:</strong> FastAPI, Spring Boot, Next.js, React</li>
@@ -119,7 +105,6 @@
       </div>
 
     </section>
-
   </main>
 
   <footer class="text-center py-6 border-t">
