@@ -81,3 +81,44 @@ if (scrollIndicator) {
     scrollIndicator.style.height = pct + '%';
   });
 }
+
+// Simple math CAPTCHA for contact form
+(function() {
+  const qEl = document.getElementById('captcha-question');
+  const ansEl = document.getElementById('captcha-answer');
+  const verifyBtn = document.getElementById('captcha-verify');
+  const feedback = document.getElementById('captcha-feedback');
+  const submitBtn = document.getElementById('submit-btn');
+
+  if (!qEl || !ansEl || !verifyBtn || !submitBtn) return;
+
+  let a, b, correct;
+
+  function newChallenge() {
+    a = Math.floor(Math.random() * 10) + 1;
+    b = Math.floor(Math.random() * 10) + 1;
+    correct = a + b;
+    qEl.textContent = `What is ${a} + ${b}?`;
+    ansEl.value = '';
+    feedback.classList.add('hidden');
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+  }
+
+  verifyBtn.addEventListener('click', () => {
+    if (parseInt(ansEl.value, 10) === correct) {
+      feedback.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      verifyBtn.textContent = 'Verified';
+      verifyBtn.disabled = true;
+    } else {
+      feedback.classList.remove('hidden');
+      newChallenge();
+    }
+  });
+
+  // initialize on page load
+  newChallenge();
+})();
+
