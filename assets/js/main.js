@@ -122,3 +122,31 @@ if (scrollIndicator) {
   newChallenge();
 })();
 
+// Email format validation on submit
+(function() {
+  const form = document.getElementById('contact-form');
+  const emailInput = document.getElementById('contact-email');
+  const emailError = document.getElementById('email-error');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!form || !emailInput || !emailError) return;
+
+  form.addEventListener('submit', (e) => {
+    const email = emailInput.value.trim();
+    if (!emailPattern.test(email)) {
+      e.preventDefault();
+      emailError.classList.remove('hidden');
+    } else {
+      emailError.classList.add('hidden');
+    }
+  });
+
+  // Hide error as they type a valid email
+  emailInput.addEventListener('input', () => {
+    if (emailPattern.test(emailInput.value.trim())) {
+      emailError.classList.add('hidden');
+    }
+  });
+})();
+
+
