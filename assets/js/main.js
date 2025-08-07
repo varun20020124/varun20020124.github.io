@@ -59,3 +59,25 @@
     else divider.style.display = (anyVisible && allVisible) ? '' : 'none';
   });
 })();
+
+// Character counter for Contact page
+const msgInput = document.getElementById('contact-message');
+const msgCount = document.getElementById('message-count');
+if (msgInput && msgCount) {
+  // initialize
+  msgCount.textContent = msgInput.value.length;
+  msgInput.addEventListener('input', () => {
+    msgCount.textContent = msgInput.value.length;
+  });
+}
+
+// Scroll-progress bar
+const scrollIndicator = document.getElementById('scroll-indicator');
+if (scrollIndicator) {
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollIndicator.style.height = pct + '%';
+  });
+}
