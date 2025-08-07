@@ -19,14 +19,25 @@
 <body class="bg-white text-gray-800 antialiased">
 
   <!-- Top Navigation -->
-  <header class="bg-gray-800 text-white">
-    <nav class="max-w-4xl mx-auto px-4 py-3 flex items-center space-x-6">
+<header class="bg-gray-800 text-white">
+  <nav class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Left: Your name -->
+    <a 
+      href="index.html" 
+      class="text-lg font-semibold hover:text-gray-300"
+    >
+      Varun Jhaveri
+    </a>
+
+    <!-- Right: Page links -->
+    <div class="flex space-x-6">
       <a href="index.html"       class="hover:text-gray-300">About</a>
       <a href="projects.html"    class="hover:text-gray-300">Projects</a>
       <a href="cv.html"          class="hover:text-gray-300">CV</a>
       <a href="contact.html"     class="hover:text-gray-300">Contact</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <!-- Main Content -->
   <main class="max-w-4xl mx-auto px-4 py-8 grid md:[grid-template-columns:450px_minmax(0,1fr)] gap-8">
@@ -38,7 +49,7 @@
         alt="Varun Jhaveri"
         class="w-[450px] h-auto object-cover rounded-lg"
       />
-      <h1 class="mt-4 text-3xl font-bold">Hi, I’m Varun Jhaveri</h1>
+      <h1 class="mt-4 text-3xl font-bold">Varun Jhaveri</h1>
       <div class="flex space-x-4 mt-3 text-2xl">
         <a href="https://www.linkedin.com/in/varunjhaveri/" target="_blank" rel="noopener" class="hover:text-blue-700">
           <i class="fab fa-linkedin"></i>
@@ -123,7 +134,7 @@
             <p>
               Developed 
               <a 
-                href="https://en.wikipedia.org/wiki/Physics-informed_neural_network" 
+                href="https://en.wikipedia.org/wiki/Physics-informed_neural_networks" 
                 target="_blank" 
                 rel="noopener" 
                 class="underline hover:text-blue-600"
